@@ -1,6 +1,13 @@
 $font-colour: #c4bbf0;
 $ui-colour: #927fbf;
+$dark-highlight: #53427c;
 
+@mixin border(){
+  border-style: solid;
+  border-width: 2px;
+  border-color: $font-colour;
+  border-radius: 10px;
+}
 
 #mainWrapper {
   display: flex;
@@ -28,8 +35,8 @@ body {
 }
 
 header {
-  background-color: #927fbf;
-  color: #c4bbf0;
+  background-color: $ui-colour;
+  color: $font-colour;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -68,11 +75,11 @@ header {
   > a {
     &:link, &:visited {
       text-decoration: none;
-      color: #c4bbf0;
+      color: $font-colour;
     }
 
     &:active {
-      color: #53427c;
+      color: $dark-highlight;
     }
   }
 
@@ -94,7 +101,7 @@ section {
 
 #contentWrapper {
   background-color: #fdfdf1;
-  color: #53427c;
+  color: $dark-highlight;
   width: 80%;
   flex-grow: 1;
   padding: 1%;
@@ -113,10 +120,7 @@ section {
   display: flex;
   margin: 10px;
   padding: 15px;
-  border-style: solid;
-  border-width: 2px;
-  border-color: #c4bbf0;
-  border-radius: 10px;
+  @include border();
 }
 
 .contentItem {
@@ -130,7 +134,7 @@ section {
 
 #hangManSketch {
   width: auto;
-  height: 45vh;
+  min-height: 45vh;
 }
 
 .head, .body, .rightArm, .leftArm, .rightLeg, .leftLeg {
@@ -164,18 +168,18 @@ button {
 
 .letter {
   width: 3%;
-  background-color: #53427c;
+  background-color: $dark-highlight;
   color: white;
   font-size: 90%;
   margin: 1%;
   padding: 16px;
-  border-radius: 10px;
   font-weight: bolder;
   font-size: larger;
+  @include border();
 
   &:disabled {
-    color: #53427c;
-    background-color: #c4bbf0;
+    color: $dark-highlight;
+    background-color: $font-colour;
   }
 }
 
@@ -213,29 +217,27 @@ button {
   top: 25%;
   z-index: 100;
   transform: translate(-50%, 0);
-  border-style: solid;
-  border-width: 1px;
   box-shadow: 1px 1px 1px 1px;
   padding: 30px;
-  border-radius: 10px;
   background-color: white;
+  @include border();
 }
 
 .gameControl {
   width: 40%;
-  background-color: #53427c;
+  background-color: $dark-highlight;
   color: white;
   font-size: 90%;
   margin: 1%;
   padding: 16px;
-  border-radius: 10px;
   font-weight: bolder;
   font-size: larger;
   cursor: pointer;
+  @include border();
 
   &:hover {
-    color: #53427c;
-    background-color: #c4bbf0;
+    color: $dark-highlight;
+    background-color: $font-colour;
   }
 }
 
@@ -254,8 +256,8 @@ button {
 }
 
 .letter:hover {
-  background-color: #c4bbf0;
-  color: #53427c;
+  background-color: $font-colour;
+  color: $dark-highlight;
   cursor: pointer;
 }
 
@@ -273,8 +275,8 @@ button {
 }
 
 footer {
-  color: #c4bbf0;
-  background-color: #927fbf;
+  color: $font-colour;
+  background-color: $ui-colour;
 }
 
 #footerWrapper {
@@ -297,12 +299,12 @@ footer {
 
 #socialMedia > a {
   &:link {
-    color: #c4bbf0;
+    color: $font-colour;
     text-decoration: none;
   }
 
   &:visited {
-    color: #c4bbf0;
+    color: $font-colour;
   }
 }
 
@@ -334,8 +336,8 @@ footer {
   }
 
   #mobileMenu {
-    background-color: #927fbf;
-    color: #c4bbf0;
+    background-color: $ui-colour;
+    color: $font-colour;
     padding-left: 0px;
   }
 
@@ -351,7 +353,7 @@ footer {
 
   .letter {
     width: 3%;
-    background-color: #53427c;
+    background-color: $dark-highlight;
     color: white;
     font-size: 90%;
     margin: 1%;

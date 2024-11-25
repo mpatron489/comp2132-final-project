@@ -167,6 +167,7 @@ function winTheGame(){
 
 function loseTheGame(){
     let tempImage = document.createElement('div');
+    //some bug with lose message shrinking after loss sometimes?
     tempImage.innerHTML = `<svg id="hangManSketch" viewbox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
         <g>
          <title>Layer 1</title>
@@ -193,8 +194,9 @@ function loseTheGame(){
          <path d="m1123,540c1,0 1.29285,-1.29291 2,-2c0.70715,-0.70709 1.18604,-0.69257 3,-2c1.14722,-0.8269 1.47424,-2.14935 2,-3c1.17554,-1.9021 2.29285,-2.29291 3,-3c0.70715,-0.70709 2,-1 3,-2c1,-1 1.29285,-1.29291 2,-2c0.70715,-0.70709 0.69348,-1.4588 2,-2c0.92383,-0.38269 1,-1 2,-1c1,0 1.29285,-0.29291 2,-1c0.70715,-0.70709 2.1731,-0.85272 3,-2c1.3075,-1.81396 2,-2 2,-3l1,0" id="svg_20" stroke-width="5" stroke="#000" fill="none"/>
         </g>  
        </svg>`;
-    svgContainer.innerHTML = null;
-    svgContainer.append(tempImage);
+    //svgContainer.innerHTML = null;
+    $("#svgContainer").empty();
+    $("#svgContainer").append(tempImage);
     overLay.classList.add("disable");
     gameContainer.innerHTML += createPopupMessage(false);
     $("#popupContainer>.popupButton").on('click', ()=>{

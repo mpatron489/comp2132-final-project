@@ -121,7 +121,7 @@ section {
 
 #hangManSketch {
   width: auto;
-  height: 45vh;
+  min-height: 45vh;
 }
 
 .head, .body, .rightArm, .leftArm, .rightLeg, .leftLeg {
@@ -159,9 +159,12 @@ button {
   font-size: 90%;
   margin: 1%;
   padding: 16px;
-  border-radius: 10px;
   font-weight: bolder;
   font-size: larger;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #c4bbf0;
+  border-radius: 10px;
 }
 .letter:disabled {
   color: #53427c;
@@ -202,12 +205,13 @@ button {
   top: 25%;
   z-index: 100;
   transform: translate(-50%, 0);
-  border-style: solid;
-  border-width: 1px;
   box-shadow: 1px 1px 1px 1px;
   padding: 30px;
-  border-radius: 10px;
   background-color: white;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #c4bbf0;
+  border-radius: 10px;
 }
 
 .gameControl {
@@ -217,10 +221,13 @@ button {
   font-size: 90%;
   margin: 1%;
   padding: 16px;
-  border-radius: 10px;
   font-weight: bolder;
   font-size: larger;
   cursor: pointer;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #c4bbf0;
+  border-radius: 10px;
 }
 .gameControl:hover {
   color: #53427c;
