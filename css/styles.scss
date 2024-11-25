@@ -1,3 +1,7 @@
+$font-colour: #c4bbf0;
+$ui-colour: #927fbf;
+
+
 #mainWrapper {
   display: flex;
   flex-direction: column;
@@ -60,19 +64,24 @@ header {
 
 .navMenuCategory {
   padding: 6px;
-}
-.navMenuCategory > a:link, .navMenuCategory > a:visited {
-  text-decoration: none;
-  color: #c4bbf0;
-}
-.navMenuCategory > a:active {
-  color: #53427c;
-}
-.navMenuCategory:hover {
-  border-style: solid;
-  border-width: 0;
-  border-bottom-width: 1px;
-  border-right-width: 1px;
+
+  > a {
+    &:link, &:visited {
+      text-decoration: none;
+      color: #c4bbf0;
+    }
+
+    &:active {
+      color: #53427c;
+    }
+  }
+
+  &:hover {
+    border-style: solid;
+    border-width: 0;
+    border-bottom-width: 1px;
+    border-right-width: 1px;
+  }
 }
 
 section {
@@ -140,6 +149,7 @@ section {
     stroke-dashoffset: 0;
   }
 }
+
 #keyboardContainer {
   display: flex;
   flex-direction: column;
@@ -162,10 +172,11 @@ button {
   border-radius: 10px;
   font-weight: bolder;
   font-size: larger;
-}
-.letter:disabled {
-  color: #53427c;
-  background-color: #c4bbf0;
+
+  &:disabled {
+    color: #53427c;
+    background-color: #c4bbf0;
+  }
 }
 
 #welcomeScreen {
@@ -179,7 +190,7 @@ button {
   height: 100%;
 }
 
-#hintField {
+#hintField{
   font-weight: bold;
   font-size: 4rem;
   padding: 20px;
@@ -221,10 +232,11 @@ button {
   font-weight: bolder;
   font-size: larger;
   cursor: pointer;
-}
-.gameControl:hover {
-  color: #53427c;
-  background-color: #c4bbf0;
+
+  &:hover {
+    color: #53427c;
+    background-color: #c4bbf0;
+  }
 }
 
 .popupButton {
@@ -247,14 +259,17 @@ button {
   cursor: pointer;
 }
 
-.contentItem > img {
-  width: 75%;
-  height: auto;
-}
-.contentItem > svg {
-  width: 75%;
-  height: auto;
-  justify-self: center;
+.contentItem > {
+  img {
+    width: 75%;
+    height: auto;
+  }
+
+  svg {
+    width: 75%;
+    height: auto;
+    justify-self: center;
+  }
 }
 
 footer {
@@ -280,49 +295,60 @@ footer {
   margin: 6px;
 }
 
-#socialMedia > a:link {
-  color: #c4bbf0;
-  text-decoration: none;
-}
-#socialMedia > a:visited {
-  color: #c4bbf0;
+#socialMedia > a {
+  &:link {
+    color: #c4bbf0;
+    text-decoration: none;
+  }
+
+  &:visited {
+    color: #c4bbf0;
+  }
 }
 
 @media (max-width: 820px) {
   #contentWrapper {
     flex-direction: column;
   }
+
   .contentItemContainer {
     max-width: 450px;
     min-width: 300px;
   }
+
   #navWrapper {
     flex-direction: column;
     align-items: last baseline;
   }
+
   #navigation {
     display: none;
     padding: 0px;
     margin: 0px;
   }
+
   #menuButton {
     display: block;
     max-width: 5vh;
     height: auto;
   }
+
   #mobileMenu {
     background-color: #927fbf;
     color: #c4bbf0;
     padding-left: 0px;
   }
+
   .navMenuCategory {
     text-align: center;
+
+    &:hover {
+      border-style: solid;
+      border-width: 0;
+      border-bottom-width: 1px;
+    }
   }
-  .navMenuCategory:hover {
-    border-style: solid;
-    border-width: 0;
-    border-bottom-width: 1px;
-  }
+
   .letter {
     width: 3%;
     background-color: #53427c;
@@ -334,11 +360,13 @@ footer {
     font-weight: bolder;
     font-size: medium;
   }
+
   .guess {
     margin: 3px;
     font-size: medium;
   }
+
   .contentItemContainer {
     width: 60%;
   }
-}/*# sourceMappingURL=styles.css.map */
+}
