@@ -127,11 +127,11 @@ section{
     width: 100%;
 }
 
-
 #hangManSketch{
-    width: 75%;
-    height: auto;
+    width: auto;
+    height: 45vh;
 }
+
 .head{
     display: none;
 }
